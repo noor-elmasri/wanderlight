@@ -28,7 +28,7 @@ technical — files tickets in plain, non-code language.
 Plays the game daily and files clear, well-reproduced bug reports.
 The most precise ticket-writer on the team.
 
-## Noor — Trainee (real — that's you)
+## Noor — Trainee (real)
 New hire, learning the codebase, the team's git workflow, and how to
 turn tickets into shipped, reviewed code. The only real person on
 this project.
