@@ -21,4 +21,4 @@ Instructions coming soon, once the first version of the game is up.
 
 ## Contributing
 
-See `CONTRIBUTING.md` for the team's workflow (coming soon).
+See `CONTRIBUTING.md` for the team's workflow.
