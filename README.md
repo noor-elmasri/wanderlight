@@ -22,3 +22,7 @@ Instructions coming soon, once the first version of the game is up.
 ## Contributing
 
 See `CONTRIBUTING.md` for the team's workflow.
+
+> This project simulates a small fictional team (see `TEAM.md`) as a
+> practice exercise. All actual GitHub activity is by one real person
+> (Noor), with AI assistance.
