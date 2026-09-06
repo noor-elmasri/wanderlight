@@ -31,7 +31,8 @@ class Item:
 class Player:
     """The player character - tracks location and inventory."""
 
-    def __init__(self, starting_room_name):
+    def __init__(self, name, starting_room_name):
+        self.name = name
         self.current_room = starting_room_name
         self.inventory = []  # list of Item objects
 
@@ -41,3 +42,34 @@ class Player:
     def has_item(self, item_name):
         """Check if the player is carrying an item by name."""
         return any(item.name == item_name for item in self.inventory)
+    
+def store(player):
+    print("Shopkeeper: \"Hello, welcome to Millbrook. Are you new in town?\"")
+    print("Shopkeeper: \"Hello, welcome to Millbrook. Are you new in town?\"")
+    print("Shopkeeper: \"You'll need a map if you want to find your way out of town.\"")
+
+    while not player.has_item("Map"):
+        print("Would you like to buy a map for 5 coins? Y/N")
+        player_input = input("> ").lower()
+        if player_input == "y":
+            player.pick_up(Item("Map", "A hand-drawn map of the region."))
+            print("Shopkeeper: \"Here you go, safe travels!\"")
+        else:
+            print("Shopkeeper: \"You won't get far without one...\"")
+
+
+def run_intro():
+    player_input = ""
+    player_name = input("Enter player name: ")
+    player = Player(player_name, "Millbrook")
+    print(f"Hello {player_name}, you are a traveling messenger who has lost their way home")
+    print("You are currently at a quiet village called 'Millbrook'. You see a store in the village.")
+    print("Would you like to enter the store to start the game? Y/N")
+    player_input = (input("> ")).lower()
+    if player_input == "y":
+        store(player)
+    else:
+        print(f"Very well, thank you {player_name} for playing. Goodbye")
+
+
+run_intro()
