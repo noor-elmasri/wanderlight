@@ -45,8 +45,8 @@ class Player:
     
 def store(player):
     print("Shopkeeper: \"Hello, welcome to Millbrook. Are you new in town?\"")
-    print("Shopkeeper: \"Hello, welcome to Millbrook. Are you new in town?\"")
     print("Shopkeeper: \"You'll need a map if you want to find your way out of town.\"")
+
 
     while not player.has_item("Map"):
         print("Would you like to buy a map for 5 coins? Y/N")
