@@ -72,4 +72,5 @@ def run_intro():
         print(f"Very well, thank you {player_name} for playing. Goodbye")
 
 
-run_intro()
+if __name__ == "__main__":
+    run_intro()
