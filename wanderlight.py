@@ -17,7 +17,9 @@ class Room:
 
     def describe(self):
         """Return the text shown to the player when they enter this room."""
-        return f"{self.name}\n{self.description}"
+        exit_key = self.exits.keys()
+        exit_join =", ".join(exit_key)
+        return f"{self.name}\n{self.description}\nExits: {exit_join}"
 
 
 class Item:
@@ -57,7 +59,7 @@ def store(player):
         else:
             print("Shopkeeper: \"You won't get far without one...\"")
 
-
+''''''
 def run_intro():
     player_input = ""
     player_name = input("Enter player name: ")
