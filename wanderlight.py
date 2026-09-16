@@ -59,13 +59,18 @@ def store(player):
         else:
             print("Shopkeeper: \"You won't get far without one...\"")
 
-''''''
+rooms_dict ={
+    "Millbrook": Room("Millbrook", "A quiet village with a general store.", {"north": "Bramblegate"})
+}
+
+
 def run_intro():
     player_input = ""
     player_name = input("Enter player name: ")
     player = Player(player_name, "Millbrook")
+    room_1 = rooms_dict["Millbrook"].describe()
     print(f"Hello {player_name}, you are a traveling messenger who has lost their way home")
-    print("You are currently at a quiet village called 'Millbrook'. You see a store in the village.")
+    print(f"You are currently at {room_1}")  
     print("Would you like to enter the store to start the game? Y/N")
     player_input = (input("> ")).lower()
     if player_input == "y":
